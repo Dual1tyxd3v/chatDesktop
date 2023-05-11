@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff2");
+}
+@font-face {
+  font-family: "Lato Bold";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff2");
+}
 *,
 *::after,
 *::before {
@@ -5,7 +17,7 @@
   margin: 0;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
 }
 
@@ -31,4 +43,111 @@ img {
   border: none;
   position: absolute;
   clip: rect(0, 0, 0, 0);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.navigation {
+  width: 23.8vw;
+  height: 100vh;
+  max-width: 335px;
+  outline: 1px solid red;
+}
+
+.menu {
+  width: 5.1vw;
+  height: 100vh;
+  max-width: 72px;
+  min-width: 50px;
+  background-color: #000;
+  padding: 10px 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  min-width: 40px;
+  margin: 0 auto 20px;
+  max-width: 52px;
+}
+.dots__item {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+.dots__item--red {
+  background-color: #FF6057;
+}
+.dots__item--yellow {
+  background-color: #FFBD2E;
+}
+.dots__item--green {
+  background-color: #28CA42;
+}
+
+.servers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.servers li {
+  margin-bottom: 20px;
+  display: block;
+}
+.servers li:last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+.servers__item {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  background-position: center;
+  border-radius: 20px;
+  opacity: 0.4;
+}
+.servers__item:hover, .servers__item--active {
+  opacity: 1;
+}
+.servers__item--shape {
+  background-image: url(../img/server--shape.png);
+}
+.servers__item--circles {
+  background-image: url(../img/server--circles.svg);
+  background-size: 20px;
+  background-color: #E25A5A;
+}
+.servers__item--p {
+  background-image: url(../img/server--p.png);
+}
+.servers__item--ball {
+  background-image: url(../img/server--ball.png);
+  background-color: #EA4C89;
+  background-size: 25.5px;
+}
+.servers__item--up {
+  background-image: url(../img/server--up.png);
+}
+.servers__item--be {
+  background-image: url(../img/server--be.png);
+}
+.servers__item--lines {
+  background-image: url(../img/server--lines.png);
+  background-size: 28px;
+  background-color: #127ABD;
+}
+.servers__item--btnAdd {
+  background-image: url(../img/server--add.svg);
+  background-color: #737979;
+  background-size: 15.5px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

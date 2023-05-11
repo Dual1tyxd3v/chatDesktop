@@ -1,0 +1,22 @@
+.dots {
+  display: flex;
+  justify-content: space-between;
+  min-width: 40px;
+  margin: 0 auto 20px;
+  max-width: 52px;
+  &__item {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+  &__item--red {
+    background-color: #FF6057;
+  }
+  &__item--yellow {
+    background-color: #FFBD2E;
+  }
+  &__item--green {
+    background-color: #28CA42;
+  }
+}

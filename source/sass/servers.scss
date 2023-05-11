@@ -1,0 +1,60 @@
+.servers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  & li {
+    margin-bottom: 20px;
+    display: block;
+  }
+  & li:last-child {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+  &__item {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    background-position: center;
+    border-radius: 20px;
+    opacity: 0.4;
+  }
+  &__item:hover,
+  &__item--active {
+    opacity: 1;
+  }
+  &__item--shape {
+    background-image: url(../img/server--shape.png);
+  }
+  &__item--circles {
+    background-image: url(../img/server--circles.svg);
+    background-size: 20px;
+    background-color: #E25A5A;
+  }
+  &__item--p {
+    background-image: url(../img/server--p.png);
+  }
+  &__item--ball {
+    background-image: url(../img/server--ball.png);
+    background-color: #EA4C89;
+    background-size: 25.5px;
+  }
+  &__item--up {
+    background-image: url(../img/server--up.png);
+  }
+  &__item--be {
+    background-image: url(../img/server--be.png);
+  }
+  &__item--lines {
+    background-image: url(../img/server--lines.png);
+    background-size: 28px;
+    background-color: #127ABD;
+  }
+  &__item--btnAdd {
+    background-image: url(../img/server--add.svg);
+    background-color:#737979;
+    background-size: 15.5px;
+    cursor: pointer;
+  }
+}
