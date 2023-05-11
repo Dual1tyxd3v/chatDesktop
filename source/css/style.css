@@ -113,6 +113,7 @@ img {
   background-position: center;
   border-radius: 20px;
   opacity: 0.4;
+  border: none;
 }
 .servers__item:hover, .servers__item--active {
   opacity: 1;
@@ -154,14 +155,19 @@ img {
 .social {
   background-color: #25272A;
   flex-grow: 1;
-  padding: 34px 24px;
+  padding: 34px 9.2%;
   overflow: auto;
+  min-width: 183px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.header__arrow {
+  transition: 0.3s transform;
 }
 .header__title {
   font-weight: 700;
@@ -172,7 +178,10 @@ img {
   align-items: center;
 }
 .header__title--opened .header__arrow {
-  transform: rotate(180deg);
+  transform: scaleY(-1);
+}
+.header__title--opened + .header__list {
+  transform: scaleY(1);
 }
 .header__text {
   margin-right: 10px;
@@ -187,11 +196,10 @@ img {
   border: none;
   cursor: pointer;
 }
-.header__select {
-  position: relative;
-}
 .header__list {
-  display: none;
+  transform: scaleY(0);
+  transition: 0.3s transform;
+  transform-origin: top;
   position: absolute;
   z-index: 2;
   background-color: #25272A;
@@ -203,12 +211,15 @@ img {
   display: block;
 }
 .header__option {
-  color: #fff;
+  color: #B5B5B5;
   cursor: pointer;
   text-align: center;
 }
 .header__option:hover {
   color: #25272A;
   background-color: #fff;
+}
+.header__option--active {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
