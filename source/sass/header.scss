@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    &--opened .header__arrow {
+      transform: rotate(180deg);
+    }
+  }
+  &__text {
+    margin-right: 10px;
+  }
+  &__settings {
+    width: 16.5px;
+    height: 15.5px;
+    background-image: url(../img/header--settings.svg);
+    background-color: transparent;
+    background-size: 16.5px 15.5px;
+    background-position:center;
+    border: none;
+    cursor: pointer;
+  }
+  &__select {
+    position: relative;
+  }
+  &__list {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #25272A;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+    &--active {
+      display: block;
+    }
+  }
+  &__option {
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      color: #25272A;
+      background-color: #fff;
+    }
+  }
+}

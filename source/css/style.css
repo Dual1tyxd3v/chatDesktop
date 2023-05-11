@@ -5,7 +5,7 @@
   src: url("../fonts/Lato-Regular.woff2");
 }
 @font-face {
-  font-family: "Lato Bold";
+  font-family: "Lato";
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/Lato-Bold.woff2");
@@ -54,7 +54,7 @@ img {
   width: 23.8vw;
   height: 100vh;
   max-width: 335px;
-  outline: 1px solid red;
+  display: flex;
 }
 
 .menu {
@@ -149,5 +149,66 @@ img {
   background-color: #737979;
   background-size: 15.5px;
   cursor: pointer;
+}
+
+.social {
+  background-color: #25272A;
+  flex-grow: 1;
+  padding: 34px 24px;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.header__title--opened .header__arrow {
+  transform: rotate(180deg);
+}
+.header__text {
+  margin-right: 10px;
+}
+.header__settings {
+  width: 16.5px;
+  height: 15.5px;
+  background-image: url(../img/header--settings.svg);
+  background-color: transparent;
+  background-size: 16.5px 15.5px;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+.header__select {
+  position: relative;
+}
+.header__list {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: #25272A;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+.header__list--active {
+  display: block;
+}
+.header__option {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+.header__option:hover {
+  color: #25272A;
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
