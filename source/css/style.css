@@ -319,6 +319,16 @@ img {
 .content {
   width: 62.15vw;
   min-width: 660px;
+  display: flex;
+  flex-direction: column;
+}
+.content__layer {
+  width: 6.5px;
+}
+.content__wrapper {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
 }
 
 .head {
@@ -412,6 +422,41 @@ img {
   background-image: url(../img/head--counter.svg);
   background-size: 10.5px 15px;
   margin-right: 6px;
+}
+
+.chat {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 20px 25px;
+}
+.chat__message {
+  display: flex;
+  align-items: center;
+}
+.chat__avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 5px;
+}
+.chat__title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+.chat__time {
+  color: #8D8D8D;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 8px;
+}
+.chat__text {
+  font-size: 13px;
+  line-height: 20px;
+}
+.chat__text--link {
+  line-height: 18px;
+  color: #3577EF;
 }
 
 .info {

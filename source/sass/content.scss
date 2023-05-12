@@ -1,4 +1,14 @@
 .content {
   width: 62.15vw;
   min-width: 660px;
+  display: flex;
+  flex-direction: column;
+  &__layer {
+    width: 6.5px;
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
 }
