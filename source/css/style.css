@@ -48,12 +48,14 @@ img {
 .container {
   width: 100vw;
   height: 100vh;
+  display: flex;
 }
 
 .navigation {
   width: 23.8vw;
   height: 100vh;
   max-width: 335px;
+  min-width: 238px;
   display: flex;
 }
 .navigation__layer {
@@ -312,5 +314,108 @@ img {
 }
 .group__list--friends .group__item--online::before {
   background-color: #70CC16;
+}
+
+.content {
+  width: 62.15vw;
+  min-width: 660px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 22px 14.5px;
+  border-bottom: 1px solid #c2c2c2;
+}
+.head__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.head__title::after {
+  content: "";
+  display: block;
+  margin-left: 5px;
+  width: 15.5px;
+  height: 15px;
+  background-image: url(../img/head--start.svg);
+  background-size: 15.5px 15px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.head__title:hover::after {
+  opacity: 1;
+}
+.head__menu {
+  display: flex;
+  align-items: center;
+}
+.head__submenu:hover .head__dot {
+  opacity: 1;
+}
+.head__dot {
+  display: block;
+  width: 4.5px;
+  height: 4.5px;
+  background-color: #000;
+  opacity: 0.4;
+  border-radius: 3px;
+  margin-bottom: 1.5px;
+}
+.head__dot:last-child {
+  margin-bottom: 0;
+}
+.head__notifications {
+  display: block;
+  width: 14.5px;
+  height: 15.5px;
+  background-image: url(../img/head--notification.svg);
+  background-size: 14.5px 15.5px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.4;
+  cursor: pointer;
+  margin-right: 22.5px;
+}
+.head__notifications:hover {
+  opacity: 1;
+}
+.head__search {
+  color: #8D8D8D;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 8px 35px 8px 16.5px;
+  width: 17.2vw;
+  max-width: 245px;
+  min-width: 140px;
+  border: 0.5px solid rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  margin-right: 23px;
+  background-image: url(../img/head--search.svg);
+  background-size: 15.5px;
+  background-position: center right 16.5px;
+}
+.head__counter {
+  color: #A4A4A4;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 24px;
+  display: flex;
+}
+.head__counter::before {
+  content: "";
+  display: block;
+  width: 10.5px;
+  height: 15px;
+  background-image: url(../img/head--counter.svg);
+  background-size: 10.5px 15px;
+  margin-right: 6px;
+}
+
+.info {
+  width: 14.35vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
