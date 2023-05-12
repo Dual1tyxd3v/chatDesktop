@@ -1,7 +1,31 @@
 .social {
   background-color: #25272A;
   flex-grow: 1;
-  padding: 34px 9.2%;
+  padding: 34px 8.7%;
   overflow: auto;
   min-width: 183px;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 5px;
+    border-radius: 5px;
+  }
+  &__treads {
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    color: #B5B5B5;
+    margin-bottom: 32px;
+    &::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-image: url(../img/treads--icon.svg);
+      background-size: 18px;
+      margin-right: 11px;
+    }
+  }
 }

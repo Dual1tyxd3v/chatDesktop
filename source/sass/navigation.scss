@@ -3,4 +3,10 @@
   height: 100vh;
   max-width: 335px;
   display: flex;
+  &__layer {
+    width: 0.5vw;
+    min-width: 3px;
+    max-width: 7.5px;
+    background-color: #25272A;
+  }
 }

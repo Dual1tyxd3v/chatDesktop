@@ -17,7 +17,7 @@
   margin: 0;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato";
   font-style: normal;
 }
 
@@ -55,6 +55,12 @@ img {
   height: 100vh;
   max-width: 335px;
   display: flex;
+}
+.navigation__layer {
+  width: 0.5vw;
+  min-width: 3px;
+  max-width: 7.5px;
+  background-color: #25272A;
 }
 
 .menu {
@@ -155,9 +161,33 @@ img {
 .social {
   background-color: #25272A;
   flex-grow: 1;
-  padding: 34px 9.2%;
+  padding: 34px 8.7%;
   overflow: auto;
   min-width: 183px;
+}
+.social::-webkit-scrollbar {
+  width: 7px;
+}
+.social::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 5px;
+  border-radius: 5px;
+}
+.social__treads {
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  color: #B5B5B5;
+  margin-bottom: 32px;
+}
+.social__treads::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/treads--icon.svg);
+  background-size: 18px;
+  margin-right: 11px;
 }
 
 .header {
@@ -165,6 +195,7 @@ img {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-bottom: 30px;
 }
 .header__arrow {
   transition: 0.3s transform;
@@ -221,5 +252,65 @@ img {
 }
 .header__option--active {
   color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.group {
+  margin-bottom: 12px;
+}
+.group:last-child {
+  margin-bottom: 0;
+}
+.group__title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #919191;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.group__item {
+  padding: 6px 0 7px 12px;
+  color: #B5B5B5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+}
+.group__item--active {
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.group__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  margin-right: 12.5px;
+}
+.group__list--friends li {
+  margin-bottom: 10px;
+}
+.group__list--friends li:last-child {
+  margin-bottom: 0;
+}
+.group__list--friends .group__item {
+  padding: 0;
+}
+.group__list--friends .group__item::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 4px;
+  margin-right: 7px;
+}
+.group__list--friends .group__item--online::before {
+  background-color: #70CC16;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,14 +2,21 @@ const selectHeader = document.querySelector('.header__title');
 const selectOptions = document.querySelectorAll('.header__option');
 const headerText = document.querySelector('.header__text');
 const serversItems = document.querySelectorAll('.servers__item:not(.servers__item--btnAdd)');
+const groupItems = document.querySelectorAll('.group__item');
 
-// --SERVERS ITEMS SWITCH
-serversItems.forEach(server => server.addEventListener('click', (e) => {
+function switchActiveClass(e, className) {
   e.preventDefault();
 
-  document.querySelector('.servers__item--active').classList.remove('servers__item--active');
-  e.target.classList.add('servers__item--active');
-}));
+  document.querySelector(`.${className}`).classList.remove(className);
+  e.target.classList.add(className);
+}
+
+// --SERVERS ITEMS SWITCH
+serversItems.forEach(server => server.addEventListener('click', (e) => switchActiveClass(e, 'servers__item--active')));
+//
+
+// --GROUP ITEM SWITCH
+groupItems.forEach(groupItem => groupItem.addEventListener('click', (e) => switchActiveClass(e, 'group__item--active')));
 //
 
 // --SELECT LOGIC

@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-bottom: 30px;
   &__arrow {
     transition: 0.3s transform;
   }
@@ -58,6 +59,8 @@
     }
     &--active {
       color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
     }
   }
 }
