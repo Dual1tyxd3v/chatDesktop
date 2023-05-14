@@ -3,12 +3,22 @@ const selectOptions = document.querySelectorAll('.header__option');
 const headerText = document.querySelector('.header__text');
 const serversItems = document.querySelectorAll('.servers__item:not(.servers__item--btnAdd)');
 const groupItems = document.querySelectorAll('.group__item');
+const headTitle = document.querySelector('.head__title');
+const messageInput = document.querySelector('.new-message__input');
+
+const INPUT_PLACEHOLDER = 'Message in';
 
 function switchActiveClass(e, className) {
   e.preventDefault();
 
   document.querySelector(`.${className}`).classList.remove(className);
   e.target.classList.add(className);
+
+  if (className.includes('group__item')) {
+    const formatedText = e.target.textContent.replace('# ', '#');
+    headTitle.textContent = formatedText;
+    messageInput.placeholder = `${INPUT_PLACEHOLDER} ${formatedText}`;
+  }
 }
 
 // --SERVERS ITEMS SWITCH
