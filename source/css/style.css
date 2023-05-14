@@ -523,4 +523,50 @@ img {
   width: 16px;
   height: 16px;
 }
+
+.new-message {
+  display: flex;
+  padding: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.24);
+}
+.new-message__btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 19px;
+  opacity: 0.4;
+}
+.new-message__btn:hover {
+  opacity: 1;
+}
+.new-message__btn:last-child {
+  margin-right: 0;
+}
+.new-message__btn--add {
+  background-image: url(../img/chat--add.svg);
+  width: 13.5px;
+  height: 22px;
+}
+.new-message__btn--voice {
+  background-image: url(../img/chat--voice.svg);
+  width: 15.5px;
+  height: 21.5px;
+}
+.new-message__btn--smile {
+  background-image: url(../img/chat--smile.svg);
+  width: 20px;
+  height: 20px;
+}
+.new-message__form {
+  flex-grow: 1;
+  margin-right: 19px;
+}
+.new-message__input {
+  width: 100%;
+  color: #8D8D8D;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  outline: none;
+}
 /*# sourceMappingURL=style.css.map */

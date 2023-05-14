@@ -239,6 +239,12 @@
         <div class="content__layer"></div>
       </div>
       <div class="content__new-message new-message">
+        <button class="new-message__btn new-message__btn--add" aria-label="Add File"></button>
+        <button class="new-message__btn new-message__btn--voice" aria-label="Record voice message"></button>
+        <form action="POST" class="new-message__form">
+          <input type="text" name="newMessage" id="newMessage" class="new-message__input" placeholder="Message in #general">
+        </form>
+        <button class="new-message__btn new-message__btn--smile" aria-label="Add smile"></button>
       </div>
     </main>
     <section class="info">

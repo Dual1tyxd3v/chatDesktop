@@ -1,0 +1,45 @@
+.new-message {
+  display: flex;
+  padding: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.24);
+  &__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 19px;
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &--add {
+      background-image: url(../img/chat--add.svg);
+      width: 13.5px;
+      height: 22px;
+    }
+    &--voice {
+      background-image: url(../img/chat--voice.svg);
+      width: 15.5px;
+      height: 21.5px;
+    }
+    &--smile {
+      background-image: url(../img/chat--smile.svg);
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__form {
+    flex-grow: 1;
+    margin-right: 19px;
+  }
+  &__input {
+    width: 100%;
+    color: #8D8D8D;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    outline: none;
+  }
+}
